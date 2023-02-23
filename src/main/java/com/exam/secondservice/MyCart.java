@@ -24,7 +24,7 @@ public class MyCart {
     private String prodImg;
 
     @Column(name = "product_quantity", nullable = false)
-    private Long prodQuantity;
+    private Integer prodQuantity;
 
     @Column(name = "unit_price", nullable = false)
     private Long unitPrice;

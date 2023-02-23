@@ -46,19 +46,6 @@ public class MyCartController {
         return new ResponseEntity<MyCart>(cart1, HttpStatus.OK);
     }
 
-     // @PutMapping("/{id}")
-    // public ResponseEntity<CandidateAcademicInfo> updateAcademicInformation(@PathVariable Long id,
-    //         @RequestBody CandidateAcademicInfo academicInfotmation) {
-    //     CandidateAcademicInfo updatedAcademicInformation = academicInfoService.updateAcademicInformation(id,
-    //             academicInfotmation);
-    //     if (updatedAcademicInformation == null) {
-    //         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-
-    //     } else {
-    //         return new ResponseEntity<CandidateAcademicInfo>(updatedAcademicInformation, HttpStatus.OK);
-    //     }
-    // }
-
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteProduct(@PathVariable Long id) {
         MyCart product1 = cartService.getCartById(id);
