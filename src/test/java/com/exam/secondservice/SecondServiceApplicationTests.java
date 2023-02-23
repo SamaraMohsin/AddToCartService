@@ -23,7 +23,7 @@ class SecondServiceApplicationTests {
 	@Test
 	void getAndSetProductQunatity(){
 		MyCart cut = new MyCart();
-		Integer prodQuantity = 684750000;
+		Long prodQuantity = 684750000L;
 		cut.setProdQuantity(prodQuantity);
 		assertEquals(prodQuantity, cut.getProdQuantity());
 	}
@@ -31,7 +31,7 @@ class SecondServiceApplicationTests {
 	@Test
 	void getAndSetTotalPrice(){
 		MyCart cut = new MyCart();
-		Integer totalPrice = 684750000;
+		Long totalPrice = 684750000L;
 		cut.setTotalPrice(totalPrice);
 		assertEquals(totalPrice, cut.getTotalPrice());
 	}

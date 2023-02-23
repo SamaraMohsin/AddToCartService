@@ -57,7 +57,7 @@ public class SecondServiceControllerTests {
 
     @Test
 	public void canSaveCart() throws Exception {
-		MyCart cart1 = new MyCart(1L,"ball","img1",2,200,400);
+		MyCart cart1 = new MyCart(1L,"ball","img1",2L,200L,400L);
 		when(cartService.saveCart(cart1)).thenReturn(cart1);
 		mvc.perform(post("/api/carts")
 				.contentType(MediaType.APPLICATION_JSON)
@@ -68,9 +68,9 @@ public class SecondServiceControllerTests {
 
     @Test
 	public void canGetAllCartDetails() throws Exception {
-        MyCart cart1 = new MyCart(1L,"ball","img1",2,200,400);
+        MyCart cart1 = new MyCart(1L,"ball","img1",2L,200L,400L);
 
-        MyCart cart2 = new MyCart(1L,"bat","img1",2,200,400);
+        MyCart cart2 = new MyCart(1L,"bat","img1",2L,200L,400L);
 
 		List<MyCart> allCarts = new ArrayList<MyCart>();
 		allCarts.add(cart1);
@@ -84,7 +84,7 @@ public class SecondServiceControllerTests {
 
     @Test
 	public void canGetCartById() throws Exception {
-        MyCart cart1 = new MyCart(1L,"ball","img1",2,200,400);
+        MyCart cart1 = new MyCart(1L,"ball","img1",2L,200L,400L);
 
 		when(cartService.getCartById(1L)).thenReturn(cart1);
 		mvc.perform(get("/api/carts/1")
@@ -97,7 +97,7 @@ public class SecondServiceControllerTests {
 
     @Test
 	public void canDeleteCartbyId() throws Exception {
-        MyCart cart1 = new MyCart(1L,"ball","img1",2,200,400);
+        MyCart cart1 = new MyCart(1L,"ball","img1",2L,200L,400L);
 		when(cartService.getCartById(1L)).thenReturn(cart1);
 		mvc.perform(delete("/api/carts/1"))
 			.andExpect(status().isNoContent());
@@ -105,9 +105,9 @@ public class SecondServiceControllerTests {
 
     @Test
 	public void canDeleteAll() throws Exception {
-        MyCart cart1 = new MyCart(1L,"ball","img1",2,200,400);
+        MyCart cart1 = new MyCart(1L,"ball","img1",2L,200L,400L);
 
-        MyCart cart2 = new MyCart(1L,"bat","img1",2,200,400);
+        MyCart cart2 = new MyCart(1L,"bat","img1",2L,200L,400L);
 
 		List<MyCart> allCarts = new ArrayList<MyCart>();
 		allCarts.add(cart1);

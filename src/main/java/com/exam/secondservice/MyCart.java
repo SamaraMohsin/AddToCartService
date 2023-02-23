@@ -24,12 +24,12 @@ public class MyCart {
     private String prodImg;
 
     @Column(name = "product_quantity", nullable = false)
-    private Integer prodQuantity;
+    private Long prodQuantity;
 
     @Column(name = "unit_price", nullable = false)
-    private Integer unitPrice;
+    private Long unitPrice;
 
     @Column(name = "total_price", nullable = false)
-    private Integer totalPrice;
+    private Long totalPrice;
 
 }
